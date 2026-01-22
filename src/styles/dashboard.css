@@ -1,0 +1,74 @@
+:root {
+    --bg: #0b0f13;
+    --accent: #00f0ff;
+    --accent2: #7f00ff;
+  }
+  
+  .dash-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;    /* <-- IMPORTANT */
+    background: #0b0f13;
+    color: #e8faff;
+  }
+  
+  
+  /* Sidebar */
+  .dash-sidebar {
+    width: 240px;
+    backdrop-filter: blur(12px) saturate(140%);
+    background: rgba(255, 255, 255, 0.03);
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .dash-logo {
+    font-size: 28px;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .dash-logo span {
+    color: var(--accent2);
+  }
+  
+  .dash-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .dash-link {
+    text-decoration: none;
+    color: #d0e9f0;
+    font-size: 16px;
+    opacity: 0.85;
+    transition: 0.25s;
+  }
+  
+  .dash-link:hover {
+    opacity: 1;
+    transform: translateX(4px);
+    color: var(--accent);
+  }
+  
+  .logout {
+    color: #ff6969 !important;
+    font-weight: 600;
+  }
+  
+  /* Main content */
+  .dash-main {
+    flex: 1;
+    padding: 40px;
+  
+    justify-content: center;        /* centers horizontally */
+    align-items: flex-start;
+  
+    /* NEW — restrict main content width */
+    max-width: 1100px;
+    margin: 0 auto;                 /* center container */
+  }
+  

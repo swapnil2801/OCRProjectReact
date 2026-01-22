@@ -1,0 +1,30 @@
+.history-title {
+    font-size: 32px;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  
+  .history-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .history-card {
+    background: rgba(255,255,255,0.05);
+    padding: 18px;
+    border-radius: 14px;
+    transition: 0.2s;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  
+  .history-card:hover {
+    border: 1px solid var(--accent);
+    transform: translateY(-4px);
+  }
+  
+  .date {
+    font-size: 12px;
+    opacity: 0.6;
+  }
+  

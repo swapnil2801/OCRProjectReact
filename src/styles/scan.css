@@ -1,0 +1,393 @@
+.scan-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  
+  .scan-container {
+    width: 100%;
+    max-width: 900px;         /* this centers the panel */
+    margin: 0 auto;
+  
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+  
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  
+    backdrop-filter: blur(12px) saturate(140%);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  @keyframes panelFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  
+  
+  .upload-box {
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    padding: 30px;
+    width: 380px;
+    height: 220px;
+    border-radius: 18px;
+    border: 1px solid rgba(0,240,255,0.12);
+    box-shadow: 0 0 25px rgba(0,240,255,0.05);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .upload-box p {
+    margin-bottom: 10px;
+    opacity: 0.9;
+    font-size: 16px;
+    color: #dffaff;
+  }
+  
+  .upload-box:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 25px rgba(0,240,255,0.2);
+    transform: translateY(-4px);
+    transition: all 0.25s ease;
+  }
+  
+  
+  .scan-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+  }
+  
+  .scan-btn {
+    width: 220px;
+    padding: 14px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.05);
+    color: #dffaff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+  }
+  
+  .scan-btn:hover {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color: black;
+    transform: translateY(-3px);
+  }
+  
+  
+  .scan-btn {
+    padding: 12px 18px;
+    font-size: 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.06);
+    color: #dffaff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .scan-btn:hover {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    color: black;
+  }
+  
+  .scan-btn.auto {
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    font-weight: 600;
+    color: black;
+  }
+  
+  
+  /* Futuristic Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 15, 20, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  width: 60%;
+  max-width: 900px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(0,255,255,0.2);
+  box-shadow: 0 0 20px rgba(0,255,255,0.15);
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.modal-title {
+  color: #00f0ff;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.modal-text {
+  width: 100%;
+  height: 300px;
+  background: rgba(0, 20, 30, 0.6);
+  color: #bffaff;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,255,0.2);
+  resize: none;
+  font-size: 14px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.copy-btn {
+  padding: 10px 16px;
+  background: #00f0ff;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.close-btn {
+  padding: 10px 16px;
+  background: #ff0055;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.loader {
+  color: #00f0ff;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+/* Upload section */
+.upload-box {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgba(0,255,255,0.15);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+}
+
+/* Custom futuristic upload button */
+.upload-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #00f0ff, #7f00ff);
+  border: none;
+  border-radius: 10px;
+  color: #051014;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s;
+}
+
+.upload-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0,240,255,0.25);
+}
+
+/* File name display */
+.file-name {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aeeaff;
+  word-break: break-all;
+}
+
+/* Remove Auto Detect preselected look */
+.scan-btn.auto {
+  background: linear-gradient(90deg, #00f0ff55, #7f00ff55); /* softer default */
+}
+
+.scan-btn.auto:hover {
+  background: linear-gradient(90deg, #00f0ff, #7f00ff); /* full power only on hover */
+}
+
+/* Fullscreen loader overlay */
+.fullscreen-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 10, 20, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  color: #aeeaff;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+/* Spinning futuristic loader */
+.loader-spinner {
+  width: 70px;
+  height: 70px;
+  border: 4px solid rgba(0, 240, 255, 0.2);
+  border-top: 4px solid #00f0ff;
+  border-radius: 50%;
+  animation: spin 1.1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Result box styling */
+.result-box {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(0,240,255,0.2);
+  border-radius: 12px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #e8f1f5;
+}
+
+.result-box pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+/* Copy Button */
+.copy-btn {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: linear-gradient(90deg, #00f0ff, #7f00ff);
+  color: #051014;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* =======================
+   POPUP MODAL OVERLAY
+   ======================= */
+   .result-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 10, 20, 0.75);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+  
+  /* =======================
+     MODAL BOX
+     ======================= */
+  .result-modal {
+    width: 650px;
+    max-height: 80vh;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    color: #e8f1f5;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .modal-title {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #00f0ff;
+  }
+  
+  .modal-content {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    padding: 14px;
+    height: 50vh;
+    overflow-y: auto;
+    border: 1px solid rgba(0, 240, 255, 0.15);
+    width: 99%;
+  }
+  
+  .modal-content pre {
+    white-space: pre-wrap;
+    font-size: 14px;
+  }
+  
+  /* =======================
+      BUTTONS
+     ======================= */
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .copy-btn {
+    padding: 10px 16px;
+    background: linear-gradient(90deg, #00f0ff, #7f00ff);
+    border: none;
+    border-radius: 8px;
+    color: #051014;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .close-btn {
+    padding: 10px 16px;
+    background: #ff4b4b;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
